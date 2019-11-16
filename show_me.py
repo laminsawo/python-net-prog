@@ -55,5 +55,6 @@ print(output_int_1 + "\n" + output_int_2 + "\n" + output_int_3 )
 print(output_cdp_1 + "\n" + output_cdp_2 + "\n" + output_cdp_3 )
 # prints the cdp neighbor relationship for each switch 
 
-net_connect.disconnect()
+net_connections =  net_connect_1, net_connect_1, net_connect_1
+net_connections.disconnect()
 # disconnects the connections
