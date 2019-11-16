@@ -10,7 +10,7 @@ cisco_3560_30 = {
     'host':   '192.168.0.30',
     'username': user,
     'password': password,
-    'port' : 22,          # optional, defaults to 22
+    'port': 22,          # optional, defaults to 22
     'secret': secret_pass,     # optional, defaults to ''
 }
 
@@ -19,7 +19,7 @@ cisco_3560_31 = {
     'host':   '192.168.0.31',
     'username': user,
     'password': password,
-    'port' : 22,          # optional, defaults to 22
+    'port': 22,          # optional, defaults to 22
     'secret': secret_pass,     # optional, defaults to ''
 }
 
@@ -28,7 +28,7 @@ cisco_3560_32 = {
     'host':   '192.168.0.32',
     'username': user,
     'password': password,
-    'port' : 22,          # optional, defaults to 22
+    'port': 22,          # optional, defaults to 22
     'secret': secret_pass,     # optional, defaults to ''
 }
 net_connect_1 = ConnectHandler(**cisco_3560_30)
@@ -46,14 +46,14 @@ output_int_2 = net_connect_2.send_command('show ip int brief')
 output_cdp_2 = net_connect_2.send_command('show cdp neighbors')
 # displays CDP neighbors
 
-output_int_3 = net_connect_2.send_command('show ip int brief')
+output_int_3 = net_connect_3.send_command('show ip int brief')
 # sends command to show ip interface brief of interfaces
-output_cdp_3 = net_connect_2.send_command('show cdp neighbors')
+output_cdp_3 = net_connect_3.send_command('show cdp neighbors')
 # displays CDP neighbors
 
-print(output_int_1 + "\n" + output_int_2 + "\n" + output_int_3 )
+print(output_int_1 + "\n" + output_int_2 + "\n" + output_int_3)
 # prints the interface brief of interfaces
-print(output_cdp_1 + "\n" + output_cdp_2 + "\n" + output_cdp_3 )
+print(output_cdp_1 + "\n" + output_cdp_2 + "\n" + output_cdp_3)
 # prints the cdp neighbor relationship for each switch 
 
 net_connect_1.disconnect()
