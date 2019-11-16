@@ -1,9 +1,9 @@
 from netmiko import ConnectHandler
 from getpass import getpass
 
-user = str(input("Enter username: "))
-password = str(input("Enter password: "))
-secret_pass = str(input("Enter enable password: "))
+user = raw_input("Enter username: ")
+password = raw_input("Enter password: ")
+secret_pass = raw_input("Enter enable password: ")
 cisco_3560 = {
     'device_type': 'cisco_ios',
     'host':   '192.168.0.30',
