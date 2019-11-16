@@ -4,7 +4,7 @@ from getpass import getpass
 user = raw_input("Enter username: ")
 password = raw_input("Enter password: ")
 secret_pass = raw_input("Enter enable password: ")
-cisco_3560 = {
+cisco_3560_30 = {
     'device_type': 'cisco_ios',
     'host':   '192.168.0.30',
     'username': user,
@@ -12,7 +12,27 @@ cisco_3560 = {
     'port' : 22,          # optional, defaults to 22
     'secret': secret_pass,     # optional, defaults to ''
 }
-net_connect = ConnectHandler(**cisco_3560)
+
+cisco_3560_31 = {
+    'device_type': 'cisco_ios',
+    'host':   '192.168.0.31',
+    'username': user,
+    'password': password,
+    'port' : 22,          # optional, defaults to 22
+    'secret': secret_pass,     # optional, defaults to ''
+}
+
+cisco_3560_32 = {
+    'device_type': 'cisco_ios',
+    'host':   '192.168.0.32',
+    'username': user,
+    'password': password,
+    'port' : 22,          # optional, defaults to 22
+    'secret': secret_pass,     # optional, defaults to ''
+}
+net_connect = ConnectHandler(**cisco_3560_30)
+net_connect = ConnectHandler(**cisco_3560_31)
+net_connect = ConnectHandler(**cisco_3560_32)
 # established a connection to the object i.e cisco device
 
 output = net_connect.send_command('show ip int brief')
