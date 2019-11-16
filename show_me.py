@@ -1,5 +1,6 @@
 from netmiko import ConnectHandler
 from getpass import getpass
+from pip._vendor.distlib.compat import raw_input
 
 user = raw_input("Enter username: ")
 password = raw_input("Enter password: ")
@@ -55,6 +56,7 @@ print(output_int_1 + "\n" + output_int_2 + "\n" + output_int_3 )
 print(output_cdp_1 + "\n" + output_cdp_2 + "\n" + output_cdp_3 )
 # prints the cdp neighbor relationship for each switch 
 
-net_connections =  net_connect_1, net_connect_2, net_connect_3
-net_connections.disconnect()
+net_connect_1.disconnect()
+net_connect_2.disconnect()
+net_connect_3.disconnect()
 # disconnects the connections
