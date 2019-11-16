@@ -35,19 +35,19 @@ net_connect_2 = ConnectHandler(**cisco_3560_31)
 net_connect_3 = ConnectHandler(**cisco_3560_32)
 # established a connection to the object i.e cisco device
 
-output_int_1 = net_connect.send_command('show ip int brief')
+output_int_1 = net_connect_1.send_command('show ip int brief')
 # sends command to show ip interface brief of interfaces
-output_cdp_1 = net_connect.send_command('show cdp neighbors')
+output_cdp_1 = net_connect_1.send_command('show cdp neighbors')
 # displays CDP neighbors
 
-output_int_2 = net_connect.send_command('show ip int brief')
+output_int_2 = net_connect_2.send_command('show ip int brief')
 # sends command to show ip interface brief of interfaces
-output_cdp_2 = net_connect.send_command('show cdp neighbors')
+output_cdp_2 = net_connect_2.send_command('show cdp neighbors')
 # displays CDP neighbors
 
-output_int_3 = net_connect.send_command('show ip int brief')
+output_int_3 = net_connect_2.send_command('show ip int brief')
 # sends command to show ip interface brief of interfaces
-output_cdp_3 = net_connect.send_command('show cdp neighbors')
+output_cdp_3 = net_connect_2.send_command('show cdp neighbors')
 # displays CDP neighbors
 
 print(output_int_1 + "\n" + output_int_2 + "\n" + output_int_3 )
@@ -55,6 +55,6 @@ print(output_int_1 + "\n" + output_int_2 + "\n" + output_int_3 )
 print(output_cdp_1 + "\n" + output_cdp_2 + "\n" + output_cdp_3 )
 # prints the cdp neighbor relationship for each switch 
 
-net_connections =  net_connect_1, net_connect_1, net_connect_1
+net_connections =  net_connect_1, net_connect_2, net_connect_3
 net_connections.disconnect()
 # disconnects the connections
