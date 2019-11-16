@@ -8,7 +8,7 @@ cisco_3560 = {
     'device_type': 'cisco_ios',
     'host':   '192.168.0.30',
     'username': user,
-    'password': passsword,
+    'password': password,
     'port' : 22,          # optional, defaults to 22
     'secret': secret_pass,     # optional, defaults to ''
 }
